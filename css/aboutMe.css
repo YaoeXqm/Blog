@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../images/4.aboutMe/background.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* 固定导航栏样式 */
+.nav {
+	z-index: 1;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	background-color: rgba(0, 0, 0, .5);
+	/* background-color: transparent;
+	transition: background-color 0.6s ease-in-out 0s; */
+}
+
+.nav li .a1 {
+	color: #FFFFFF;
+}
+
+.nav ul {
+	list-style-type: none;
+	color: #ffffff;
+	margin-left: 20px;
+	width: 1200px;
+	margin: 20px auto;
+}
+
+.nav ul>li:first-child {
+	margin-right: 300px;
+}
+
+.nav li {
+	display: inline;
+	margin-left: 60px;
+}
+
+.nav .a1 {
+	position: relative;
+	font-weight: 600;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.4);
+	transition: color 1s ease;
+	letter-spacing: 4px;
+}
+
+.nav .a1:hover {
+	color: lightblue;
+
+}
+
+.nav .a1::after {
+	--scale: 0;
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 3px;
+	background: lightblue;
+	transform: scaleX(var(--scale));
+	transform-origin: var(--x) 50%;
+	transition: transform 1s cubic-bezier(0.535, 0.05, 0.355, 1);
+
+}
+
+.nav .a1:hover::after {
+	--scale: 1;
+}
+
+.nav .a2 {
+	color: #FFFFFF;
+	font-size: 16px;
+	transition: color 1s;
+}
+
+.nav .a2:hover {
+	color: lightblue;
+}
+
+/* 主要内容 */
+.content {
+	width: 1200px;
+	height: 1200px;
+	/* border: 1px solid red; */
+	margin: auto;
+}
+
+/* 主要内容左部 */
+.contentLeft {
+	width: 730px;
+	height: 1000px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 35px;
+}
+
+/* 左栏所有盒子样式 */
+.contentLeft .aboutMe,
+.contentLeft .contact,
+.contentLeft .aboutSite,
+.contentLeft .aboutRights {
+	width: 730px;
+	height: 270px;
+	border-radius: 10px;
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255, .4);
+}
+
+/* 左栏所有theme样式 */
+.contentLeft .aboutMe .theme,
+.contentLeft .contact .theme,
+.contentLeft .aboutSite .theme,
+.contentLeft .aboutRights .theme {
+
+	width: 400px;
+	height: 40px;
+	padding-top: 35px;
+}
+
+.contentLeft .aboutMe .theme i,
+.contentLeft .contact .theme i,
+.contentLeft .aboutSite .theme i,
+.contentLeft .aboutRights .theme i {
+	color: deepskyblue;
+	font-size: 35px;
+	margin-left: 30px;
+	float: left;
+}
+
+.contentLeft .aboutMe .theme p,
+.contentLeft .contact .theme p,
+.contentLeft .aboutSite .theme p,
+.contentLeft .aboutRights .theme p {
+	font-size: 26px;
+	float: left;
+	margin-left: 20px;
+}
+
+/* 左栏所有文字框样式 */
+.contentLeft .words {
+	width: 600px;
+	height: 200px;
+	margin-left: 80px;
+}
+
+/* 左栏关于我文字样式 */
+.contentLeft .aboutMe .words {
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.contentLeft .aboutMe .words strong {
+	font-size: 18px;
+}
+
+/* 左栏联系我文字样式 */
+.contentLeft .contact .words {
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* 左栏关于网站文字样式 */
+.contentLeft .aboutSite .words {
+	font-size: 14px;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+/* 左栏关于版权文字样式 */
+.contentLeft .aboutRights .words {
+	font-size: 14px;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+
+/* 主要内容右部 */
+.contentRight {
+	width: 360px;
+	height: 1000px;
+	float: right;
+	margin-top: 40px;
+	margin-right: 35px;
+}
+
+/* 右栏盒子设置 */
+.contentRight .aboutMe,
+.contentRight .QQ,
+.contentRight .weChat {
+	width: 360px;
+	height: 310px;
+	border-radius: 10px;
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255, .4);
+}
+
+/* 横线中间加图片设置 */
+.line {
+	display: inline-block;
+	width: 50px;
+	border-top: 2px solid #ff0000;
+	vertical-align: 5px;
+}
+.contentRight .lines{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 23px;
+	color: red;
+}
+
+/* 右栏关于我图片信息样式 */
+.contentRight .aboutMe .p img{
+	margin-left: 10px;
+	text-align: left;
+	margin-top: 25px;
+}
+.contentRight .aboutMe .p .inform{
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-right: 10px;
+	line-height: 40px;
+}
+
+.contentRight .weChat img{
+	width: 230px;
+	margin-top: 10px;
+}
+.contentRight .QQ img{
+	width: 230px;
+	margin-top: 10px;
+	margin-left: 65px;
+}
+
+/* 底部样式 */
+.footer {
+	width: 1000px;
+	margin: 30px auto;
+}
+
+/* 应用链接样式 */
+.link {
+	text-align: center;
+	margin-top: 80px;
+	color: dodgerblue;
+}
+
+.link i {
+	font-size: 35px;
+	margin-left: 30px;
+}
+
+/* 版权样式 */
+.copyright {
+	color: white;
+	text-align: center;
+	margin-top: 30px;
+}
